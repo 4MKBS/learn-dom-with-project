@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    background-color: aquamarine;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 15px;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 5px solid gray;
+    font-family: sans-serif;
+}
+.todolistbox{
+    display: inline-block;
+    flex-flow: column wrap;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+.complete-list{
+    display: inline-block;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    justify-items: end;
+    align-items: center;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO APP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <div class="logo">
+            <img src="https://lh3.googleusercontent.com/a/AAcHTtfoM402Oj8ZywqRnx9L7qHxNaMgf1OxDSnvIX5S=s432-c-no" alt="to do task" width="100px" height="100px">
+        </div>
+        <h1 id="header">TO DO APP </h1>
+        <!-- <div class="mouse" style="background-color: aliceblue; height: 30px; width: 180px; margin: 5px;">
+            <p>this is test of event listener</p>
+        </div> -->
+
+        <form action="" class="new-task-container">
+            <label for="new-task">Add new task</label>
+            <input type="text" id="new-task">
+            <button id="addTask"> Add task</button>
+        </form>
+
+        <div class="todolistbox">
+            <h2>Incomplete Task</h2>
+            <ul class="items" id="items">
+                <li class="item">
+                    <input type="checkbox"><label>Task name</label>
+                    <button class="update"> update</button>
+                </li>
+                <li class="item">
+                    <input type="checkbox"><label>Task name</label>
+                    <button class="update"> update</button>
+                </li>
+                <li class="item">
+                    <input type="checkbox"><label>Task name</label>
+                    <input type="submit" class="update" value="update">
+                </li>
+            </ul>
+        </div>
+
+        <div class="complete-list box">
+            <h2>complete task</h2>
+            <ul>
+                <li class="item">Task name <button class="delete">Delete</button>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
