@@ -129,11 +129,13 @@ console.log(img[0]);
         todoul.appendChild(listItem);
         newTask.value="";
         bindincompleteitems(listItem,completeTask);
+        // console.log(completeTask);
+        
         
     }
 
     let completeTask=function(){
-        let listItem=this.perentNode;
+        let listItem=this.parentNode;
         let deletebtn=document.createElement('button');
         deletebtn.innerText='Delete';
         deletebtn.className ='delete';
@@ -145,11 +147,12 @@ console.log(img[0]);
         completeul.appendChild(listItem);
 
         bindcompleteitems(listItem,deleteTask);
+        // console.log(bindcompleteitems);
     }
 
     let deleteTask=function(){
-        let listItem=this.perentNode;
-        let ul=listItem.perentNode;
+        let listItem=this.parentNode;
+        let ul=listItem.parentNode;
         ul.removeChild(listItem);
     }
 
@@ -157,18 +160,28 @@ console.log(img[0]);
 
     let bindincompleteitems=function(taskItem,checkboxclick){
         let checkbox=taskItem.querySelector('input[type="checkbox"]');
-        checkbox.onChange=checkboxclick;
+        checkbox.onchange=checkboxclick;
 
     }
     let bindcompleteitems=function(taskItem,deletebtnclick){
         let deletebutton=taskItem.querySelector('.delete');
-        checkbox.onClick=deletebtnclick;
+        deletebutton.onclick=deletebtnclick;
 
     }
 
+
+    for(let i=0; i< todoul.children.length; i++ ) {
+        bindincompleteitems(todoul.children[i], completeTask);
+    }
+    
+    for(let i=0; i< completeul.children.length; i++ ) {
+        bindcompleteitems(completeul.children[i], deleteTask);
+    } 
+
+
     form.addEventListener('submit',addTask);
 
-
+    
 
 
 
